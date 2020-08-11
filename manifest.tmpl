@@ -1,0 +1,129 @@
+{
+	"id": "99999999999999999999999999999",
+	"acceptMappedClaims": null,
+	"accessTokenAcceptedVersion": null,
+	"addIns": [],
+	"allowPublicClient": false,
+	"appId": "88888888888888888888888888",
+	"appRoles": [
+    %{ for role in roles ~}
+		{
+			"allowedMemberTypes": [
+				"User"
+			],
+			"description": "${role.name}",
+			"displayName": "${role.name}",
+			"id": "${role.id}",
+			"isEnabled": true,
+			"lang": null,
+			"origin": "Application",
+			"value": "${role.name}"
+		},
+    %{ endfor ~}
+		{
+			"allowedMemberTypes": [
+				"User"
+			],
+			"description": "User",
+			"displayName": "User",
+			"id": "1111111111111111111111111",
+			"isEnabled": true,
+			"lang": null,
+			"origin": "Application",
+			"value": null
+		},
+		{
+			"allowedMemberTypes": [
+				"User"
+			],
+			"description": "msiam_access",
+			"displayName": "msiam_access",
+			"id": "22222222222222222222222222",
+			"isEnabled": true,
+			"lang": null,
+			"origin": "Application",
+			"value": null
+		}
+	],
+	"oauth2AllowUrlPathMatching": false,
+	"createdDateTime": "2019-09-11T17:48:00Z",
+	"groupMembershipClaims": null,
+	"identifierUris": [
+		"https://ray.test.example.com/users/saml/metadata"
+	],
+	"informationalUrls": {
+		"termsOfService": null,
+		"support": null,
+		"privacy": null,
+		"marketing": null
+	},
+	"keyCredentials": [],
+	"knownClientApplications": [],
+	"logoUrl": null,
+	"logoutUrl": null,
+	"name": "ptfe-test",
+	"oauth2AllowIdTokenImplicitFlow": true,
+	"oauth2AllowImplicitFlow": false,
+	"oauth2Permissions": [
+		{
+			"adminConsentDescription": "Allow the application to access ptfe-test on behalf of the signed-in user.",
+			"adminConsentDisplayName": "Access ptfe-test",
+			"id": "33333333333333333333333333333333",
+			"isEnabled": true,
+			"lang": null,
+			"origin": "Application",
+			"type": "User",
+			"userConsentDescription": "Allow the application to access ptfe-test on your behalf.",
+			"userConsentDisplayName": "Access ptfe-test",
+			"value": "user_impersonation"
+		}
+	],
+	"oauth2RequirePostResponse": false,
+	"optionalClaims": null,
+	"orgRestrictions": [],
+	"parentalControlSettings": {
+		"countriesBlockedForMinors": [],
+		"legalAgeGroupRule": "Allow"
+	},
+	"passwordCredentials": [
+		{
+			"customKeyIdentifier": null,
+			"endDate": "2020-11-25T23:38:25.886Z",
+			"keyId": "4444444444444444444444444444444",
+			"startDate": "2019-11-25T23:38:35.301Z",
+			"value": null,
+			"createdOn": "2019-11-25T23:38:35.5989327Z",
+			"hint": "R1Y",
+			"displayName": "rp"
+		}
+	],
+	"preAuthorizedApplications": [],
+	"publisherDomain": "rayexample.onmicrosoft.com",
+	"replyUrlsWithType": [
+		{
+			"url": "https:///ray.test.example.com/users/saml/auth",
+			"type": "Web"
+		}
+	],
+	"requiredResourceAccess": [
+		{
+			"resourceAppId": "5555555555555555555555555",
+			"resourceAccess": [
+				{
+					"id": "5555555555555555555555555",
+					"type": "Scope"
+				}
+			]
+		}
+	],
+	"samlMetadataUrl": null,
+	"signInUrl": "https://account.activedirectory.windowsazure.com:444/applications/default.aspx?metadata=customappsso|ISV9.1|primary|z",
+	"signInAudience": "AzureADMyOrg",
+	"tags": [],
+	"tokenEncryptionKeyId": null,
+	"verifiedPublisher": {
+		"displayName": null,
+		"verifiedPublisherId": null,
+		"addedDateTime": null
+	}
+}
